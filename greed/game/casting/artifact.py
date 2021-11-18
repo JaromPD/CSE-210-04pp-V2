@@ -14,9 +14,9 @@ class Artifact(Actor):
 
     def set_points(self):
         if self._text == "*":
-            self._points += 100
+            self._points = 100
         else:
-            self._points -= 100
+            self._points = -100
 
     def get_message(self):
         return self._message
