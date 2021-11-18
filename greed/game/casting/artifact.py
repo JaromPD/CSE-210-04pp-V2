@@ -29,8 +29,7 @@ class Artifact(Actor):
         x = self._position.get_x()
         y = self._position.get_y()
         if y >= 600:
-        #    y = 15
-            pass
+            y = 15
         else:
             y += 15
         self._position = Point(x,y)

@@ -64,7 +64,7 @@ def main():
 
         x = random.randint(1, COLS - 1)
         y = random.randint(1, ROWS - 1)
-        position = Point(x, random.randint(1,20))
+        position = Point(x, y)
         position = position.scale(CELL_SIZE)
 
         r = random.randint(0, 255)

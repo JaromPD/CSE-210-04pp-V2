@@ -60,7 +60,7 @@ class Director:
         
         self._count += 1
 
-        if self._count == 3:
+        if self._count == 1:
 
             self._count = 0
             
