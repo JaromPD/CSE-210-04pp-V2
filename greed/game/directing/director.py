@@ -50,7 +50,7 @@ class Director:
         robot.set_velocity(velocity)    
 
     def _do_updates(self, cast):
-        """Updates the robot's position and resolves any collisions with artifacts.
+        """
         
         Args:
             cast (Cast): The cast of actors.

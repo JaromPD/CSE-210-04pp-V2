@@ -2,7 +2,7 @@ from game.casting.actor import Actor
 from game.shared.point import Point
 import random
 
-# TODO: Implem(ent the Artifact class here. Don't forget to inherit from Actor!
+# TODO: Implement the Falling Objects class here. Don't forget to inherit from Actor!
 class Falling_Object(Actor):
     def __init__(self):
         super().__init__()
@@ -25,7 +25,7 @@ class Falling_Object(Actor):
         self._message = message
 
     def move(self):
-        """Move the artifacts down by a random amount between 1 and 10"""
+        """Move the artifacts down """
         x = self._position.get_x()
         y = self._position.get_y()
         if y >= 600:
