@@ -1,3 +1,9 @@
+import random
+from game.shared.color import Color
+from game.shared.point import Point
+from game.casting.falling_object import Falling_Object
+
+
 class Director:
     """A person who directs the game. 
     
@@ -51,7 +57,7 @@ class Director:
         """
         banner = cast.get_first_actor("banners")
         robot = cast.get_first_actor("robots")
-        artifacts = cast.get_actors("artifacts")
+        falling_objects = cast.get_actors("falling_object")
 
         banner.set_text(f"Score: {self._score}")
         max_x = self._video_service.get_width()
@@ -64,11 +70,11 @@ class Director:
 
             self._count = 0
             
-            for artifact in artifacts:   
-                artifact.move()
-                if robot.get_position().equals(artifact.get_position()):
-                    artifact.set_points()            
-                    points = artifact.get_points()
+            for object in falling_objects:   
+                object.move()
+                if robot.get_position().equals(object.get_position()):
+                    object.set_points()            
+                    points = object.get_points()
                     self._score += points
                     message = "Score: " + str(self._score)
                     banner.set_text(message) 
